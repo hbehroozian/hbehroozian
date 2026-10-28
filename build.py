@@ -487,10 +487,15 @@ def button(label, icon, width):
 def buttons():
     linkedin_icon = (f'<rect x="18" y="11" width="26" height="26" fill="{AMBER}"/>'
                      + text(31, 30, "in", 16, BUTTON_INK, SANS, 700, "middle"))
-    blog_icon = (pixels(31, 24, ["......##", ".....###", "....###.", "...###..", "..###...", ".###....",
-                                "###.....", "##......"], CREAM, 3)
-                 + pixels(31, 24, ["......#.", ".....#..", "........", "........", "........", "........",
-                                   "........", "#......."], AMBER, 3))
+    # a pen nib, cream with an amber breather hole
+    blog_icon = (f'<g transform="rotate(-35 31 26)">'
+                 f'<path d="M31 9 L42 21 L36.5 40 L25.5 40 L20 21 Z" fill="none" stroke="{CREAM}" stroke-width="2" stroke-linejoin="round"/>'
+                 f'<line x1="31" y1="40" x2="31" y2="28" stroke="{CREAM}" stroke-width="2"/>'
+                 f'<circle cx="31" cy="25" r="3" fill="{AMBER}"/></g>')
+    # instagram: a camera outline with the lens and the flash
+    instagram_icon = (f'<rect x="18" y="13" width="26" height="26" rx="7" fill="none" stroke="{CREAM}" stroke-width="2"/>'
+                      f'<circle cx="31" cy="26" r="6" fill="none" stroke="{CREAM}" stroke-width="2"/>'
+                      f'<circle cx="38.5" cy="18.5" r="1.8" fill="{AMBER}"/>')
     return {
         "link-linkedin.svg": button("LinkedIn", linkedin_icon, 150),
         "link-devfusionlab.svg": button(
@@ -500,6 +505,7 @@ def buttons():
         "link-jeeraph.svg": button(
             "Jeeraph", f'<image href="{JEERAPH_MARK}" x="17" y="10" width="28" height="28"/>', 140),
         "link-blog.svg": button("Blog", blog_icon, 112),
+        "link-instagram.svg": button("Instagram", instagram_icon, 162),
         "link-educateafghanistan.svg": button(
             "Educate Afghanistan", f'<image href="{EA_MARK}" x="23" y="7" width="19" height="34"/>', 254),
     }
