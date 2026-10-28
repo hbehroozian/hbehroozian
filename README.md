@@ -48,6 +48,7 @@ I write on the [Dev Fusion Lab blog](https://devfusionlab.com/blog/author/homayo
 ### Elsewhere
 
 <a href="https://www.linkedin.com/in/homayoon-behroozian-694944198/"><img src="assets/link-linkedin.svg" height="36" alt="LinkedIn"></a>
+<a href="https://www.instagram.com/homayoonbeh/"><img src="assets/link-instagram.svg" height="36" alt="Instagram"></a>
 <a href="https://devfusionlab.com/blog/author/homayoon-behroozian"><img src="assets/link-blog.svg" height="36" alt="Blog"></a>
 <a href="https://www.devfusionlab.com"><img src="assets/link-devfusionlab.svg" height="36" alt="Dev Fusion Lab"></a>
 <a href="https://panjera.com"><img src="assets/link-panjera.svg" height="36" alt="Panjera"></a>
