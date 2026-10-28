@@ -136,6 +136,23 @@ def header():
         f'clip-path="url(#disc)" style="image-rendering: pixelated; image-rendering: crisp-edges"/></g>',
     ]
 
+    # how to say the name, under the avatar: a pixel speaker, sound waves, syllables lit in turn
+    sx, sy = cx - 92, 318
+    parts.append(pixels(sx, sy - 4, ["..#...", ".##...", "###...", "###...", ".##...", "..#..."], CREAM, 3))
+    for i, rr in enumerate((9, 15, 21)):
+        parts.append(f'<path class="wave v{i}" d="M{sx + 6} {sy - 4 - rr * 0.7} A{rr} {rr} 0 0 1 {sx + 6} {sy - 4 + rr * 0.7}" '
+                     f'fill="none" stroke="{AMBER}" stroke-width="2" stroke-linecap="round"/>')
+    syl = [("ho", MUTED), ("ma", MUTED), ("YOON", AMBER)]
+    x = sx + 40
+    for i, (part, colour) in enumerate(syl):
+        parts.append(f'<text class="syl s{i}" x="{x}" y="{sy}" font-family="{MONO}" font-size="15" font-weight="600" '
+                     f'fill="{colour}" letter-spacing="1">{part}</text>')
+        x += len(part) * 10.2 + 4
+        if i < 2:
+            parts.append(text(x, sy, "·", 15, FAINT, MONO))
+            x += 14
+    parts.append(text(sx + 40, sy + 16, "rhymes with moon", 11, FAINT, MONO, spacing=0.5))
+
     # the tagline is typed out; three runs with fixed widths so the underline lands under "building things"
     lead, mid, tail = "I like solving problems and ", "building things", ", and I'm always learning."
     lead_w, mid_w, tail_w, gap = 278, 160, 262, 8  # the gap stands in for the space SVG drops
@@ -166,6 +183,14 @@ def header():
                   for i in range(18))
         + "@keyframes fall { from { transform: translateY(0); } to { transform: translateY(380px); } }"
         ".halo { transform-box: fill-box; transform-origin: center; animation: halo 3.2s steps(8) infinite; }"
+        ".wave { opacity: 0; animation: wave 2.4s steps(1) infinite; }"
+        ".v1 { animation-delay: 0.3s; } .v2 { animation-delay: 0.6s; }"
+        "@keyframes wave { 0% { opacity: 0; } 20% { opacity: 1; } 70% { opacity: 1; } 71% { opacity: 0; } }"
+        ".syl { animation: say 2.4s steps(1) infinite; }"
+        f".s0 {{ animation-name: say0; }} .s1 {{ animation-name: say1; }} .s2 {{ animation-name: say2; }}"
+        f"@keyframes say0 {{ 20% {{ fill: {CREAM}; }} 36% {{ fill: {MUTED}; }} }}"
+        f"@keyframes say1 {{ 36% {{ fill: {CREAM}; }} 52% {{ fill: {MUTED}; }} }}"
+        f"@keyframes say2 {{ 52% {{ fill: {PALE}; }} 80% {{ fill: {AMBER}; }} }}"
         "@keyframes halo { 0% { transform: scale(0.96); opacity: 0.9; } 100% { transform: scale(1.18); opacity: 0; } }"
         ".bob { animation: bob 2.4s steps(2) infinite; }"
         "@keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }"
