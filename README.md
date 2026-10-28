@@ -2,7 +2,7 @@
 
 I'm Homayoon, a software engineer and founder in Falls Church, Virginia. I've spent twelve years writing and testing software, most of it for federal and financial systems, and I run [Dev Fusion Lab](https://www.devfusionlab.com), a small studio where I build my own products.
 
-By day I lead a team of eight on a data platform that holds hundreds of millions of records. I designed its current data model and API contract, I still write code there, and I review all of it. The ten years of test automation before that left me with a habit I can't shake: I want proof that software does what it claims, so I build the checks alongside the product.
+By day I'm the technical lead on a data platform that holds hundreds of millions of records. I designed its current data model and API contract, and I still write code there every day. The ten years of test automation before that left me with a habit I can't shake: I want proof that software does what it claims, so I build the checks alongside the product.
 
 On my own time I build products of my own. [Panjera](https://panjera.com) is in production, and I'm building [Jeeraph](https://jeeraph.com) now. Agents help, and I use them, but I write my own code and read every line that ships. I came up as a developer and I still work like one.
 
@@ -19,7 +19,7 @@ There's also [Educate Afghanistan](https://educateafghanistan.com), a nonprofit 
 
 ### Where I've worked
 
-<img src="assets/timeline.svg" width="100%" alt="2024 to now: Technical Lead and Java Developer at the Internal Revenue Service, leading eight engineers on a data platform with hundreds of millions of records. 2023 to 2024: SDET at the IRS. 2022 to 2024: co-founder and CEO of TEK School. 2021 to 2022: Software Engineer in Test at FINRA. 2020 to now: founder of Dev Fusion Lab. 2020 to 2021: SDET at the IRS. 2019 to 2020: Automation Engineer and QA Lead at USPTO. 2015 to 2018: SDET at Atos.">
+<img src="assets/timeline.svg" width="100%" alt="2024 to now: Technical Lead and Java Developer at the Internal Revenue Service, on a data platform with hundreds of millions of records. 2023 to 2024: SDET at the IRS. 2022 to 2024: co-founder and CEO of TEK School. 2021 to 2022: Software Engineer in Test at FINRA. 2020 to now: founder of Dev Fusion Lab. 2020 to 2021: SDET at the IRS. 2019 to 2020: Automation Engineer and QA Lead at USPTO. 2015 to 2018: SDET at Atos.">
 
 ### Tools I use
 
@@ -47,9 +47,9 @@ I write on the [Dev Fusion Lab blog](https://devfusionlab.com/blog/author/homayo
 
 ### Elsewhere
 
-<a href="https://www.linkedin.com/in/homayoon-behroozian-694944198/"><img src="assets/link-linkedin.svg" height="44" alt="LinkedIn"></a>
-<a href="https://devfusionlab.com/blog/author/homayoon-behroozian"><img src="assets/link-blog.svg" height="44" alt="Blog"></a>
-<a href="https://www.devfusionlab.com"><img src="assets/link-devfusionlab.svg" height="44" alt="devfusionlab.com"></a>
-<a href="https://panjera.com"><img src="assets/link-panjera.svg" height="44" alt="panjera.com"></a>
-<a href="https://jeeraph.com"><img src="assets/link-jeeraph.svg" height="44" alt="jeeraph.com"></a>
-<a href="https://educateafghanistan.com"><img src="assets/link-educateafghanistan.svg" height="44" alt="educateafghanistan.com"></a>
+<a href="https://www.linkedin.com/in/homayoon-behroozian-694944198/"><img src="assets/link-linkedin.svg" height="36" alt="LinkedIn"></a>
+<a href="https://devfusionlab.com/blog/author/homayoon-behroozian"><img src="assets/link-blog.svg" height="36" alt="Blog"></a>
+<a href="https://www.devfusionlab.com"><img src="assets/link-devfusionlab.svg" height="36" alt="Dev Fusion Lab"></a>
+<a href="https://panjera.com"><img src="assets/link-panjera.svg" height="36" alt="Panjera"></a>
+<a href="https://jeeraph.com"><img src="assets/link-jeeraph.svg" height="36" alt="Jeeraph"></a>
+<a href="https://educateafghanistan.com"><img src="assets/link-educateafghanistan.svg" height="36" alt="Educate Afghanistan"></a>

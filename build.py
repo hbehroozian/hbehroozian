@@ -94,7 +94,7 @@ def header():
     import random
     rng = random.Random(5)
     w, h = 1200, 340
-    cx, cy, r = 1010, 170, 112  # the avatar
+    cx, cy, r = 1010, 150, 92  # the avatar
     small = [(742, 74), (766, 230), (860, 48), (880, 300), (1140, 60), (1160, 290),
              (800, 150), (1150, 170), (920, 40), (1100, 310), (730, 300), (860, 110)]
     edges = [(0, 2), (2, 8), (8, 4), (4, 7), (7, 5), (5, 9), (9, 3), (3, 1), (1, 10), (10, 6),
@@ -137,21 +137,21 @@ def header():
     ]
 
     # how to say the name, under the avatar: a pixel speaker, sound waves, syllables lit in turn
-    sx, sy = cx - 92, 318
-    parts.append(pixels(sx, sy - 4, ["..#...", ".##...", "###...", "###...", ".##...", "..#..."], CREAM, 3))
-    for i, rr in enumerate((9, 15, 21)):
-        parts.append(f'<path class="wave v{i}" d="M{sx + 6} {sy - 4 - rr * 0.7} A{rr} {rr} 0 0 1 {sx + 6} {sy - 4 + rr * 0.7}" '
+    sx, sy = cx - 104, 296
+    parts.append(pixels(sx, sy - 6, ["..#...", ".##...", "###...", "###...", ".##...", "..#..."], CREAM, 4))
+    for i, rr in enumerate((11, 18, 25)):
+        parts.append(f'<path class="wave v{i}" d="M{sx + 8} {sy - 6 - rr * 0.7} A{rr} {rr} 0 0 1 {sx + 8} {sy - 6 + rr * 0.7}" '
                      f'fill="none" stroke="{AMBER}" stroke-width="2" stroke-linecap="round"/>')
     syl = [("ho", MUTED), ("ma", MUTED), ("YOON", AMBER)]
-    x = sx + 40
+    x = sx + 46
     for i, (part, colour) in enumerate(syl):
-        parts.append(f'<text class="syl s{i}" x="{x}" y="{sy}" font-family="{MONO}" font-size="15" font-weight="600" '
+        parts.append(f'<text class="syl s{i}" x="{x}" y="{sy}" font-family="{MONO}" font-size="20" font-weight="700" '
                      f'fill="{colour}" letter-spacing="1">{part}</text>')
-        x += len(part) * 10.2 + 4
+        x += len(part) * 12.6 + 5
         if i < 2:
             parts.append(text(x, sy, "·", 15, FAINT, MONO))
-            x += 14
-    parts.append(text(sx + 40, sy + 16, "rhymes with moon", 11, FAINT, MONO, spacing=0.5))
+            x += 17
+    parts.append(text(sx + 46, sy + 20, "rhymes with moon", 12.5, FAINT, MONO, spacing=0.5))
 
     # the tagline is typed out; three runs with fixed widths so the underline lands under "building things"
     lead, mid, tail = "I like solving problems and ", "building things", ", and I'm always learning."
@@ -351,7 +351,7 @@ SHOW_EMPLOYERS = True  # False swaps organisation names for a plain description
 
 TIMELINE = [  # years, title, organisation (named / unnamed), note, still running?
     ("2024 · now", "Technical Lead · Java Developer", ("Internal Revenue Service", "a federal agency"),
-     "Lead eight engineers on a data platform that holds hundreds of millions of records; "
+     "Technical lead on a data platform that holds hundreds of millions of records; "
      "designed its Version 4 data model and API contract.", True),
     ("2023 · 2024", "SDET", ("Internal Revenue Service", "the same agency"),
      "Designed the team's automated test solution across API, contract, data and end-to-end layers.", False),
@@ -487,20 +487,21 @@ def button(label, icon, width):
 def buttons():
     linkedin_icon = (f'<rect x="18" y="11" width="26" height="26" fill="{AMBER}"/>'
                      + text(31, 30, "in", 16, BUTTON_INK, SANS, 700, "middle"))
-    blog_icon = (f'<rect x="19" y="12" width="22" height="26" fill="none" stroke="{CREAM}" stroke-width="2"/>'
-                 + "".join(f'<line x1="24" y1="{y}" x2="{36 if y < 30 else 31}" y2="{y}" stroke="{CREAM}" '
-                           f'stroke-width="2"/>' for y in (20, 25, 30)))
+    blog_icon = (pixels(31, 24, ["......##", ".....###", "....###.", "...###..", "..###...", ".###....",
+                                "###.....", "##......"], CREAM, 3)
+                 + pixels(31, 24, ["......#.", ".....#..", "........", "........", "........", "........",
+                                   "........", "#......."], AMBER, 3))
     return {
-        "link-linkedin.svg": button("LinkedIn", linkedin_icon, 156),
+        "link-linkedin.svg": button("LinkedIn", linkedin_icon, 150),
         "link-devfusionlab.svg": button(
-            "devfusionlab.com", f'<image href="{DFL_MARK}" x="16" y="15" width="30" height="19"/>', 232),
+            "Dev Fusion Lab", f'<image href="{DFL_MARK}" x="16" y="15" width="30" height="19"/>', 206),
         "link-panjera.svg": button(
-            "panjera.com", f'<image href="{PANJERA_MARK}" x="22" y="10" width="19" height="28"/>', 180),
+            "Panjera", f'<image href="{PANJERA_MARK}" x="22" y="10" width="19" height="28"/>', 140),
         "link-jeeraph.svg": button(
-            "jeeraph.com", f'<image href="{JEERAPH_MARK}" x="17" y="10" width="28" height="28"/>', 180),
-        "link-blog.svg": button("Blog", blog_icon, 110),
+            "Jeeraph", f'<image href="{JEERAPH_MARK}" x="17" y="10" width="28" height="28"/>', 140),
+        "link-blog.svg": button("Blog", blog_icon, 112),
         "link-educateafghanistan.svg": button(
-            "educateafghanistan.com", f'<image href="{EA_MARK}" x="23" y="7" width="19" height="34"/>', 292),
+            "Educate Afghanistan", f'<image href="{EA_MARK}" x="23" y="7" width="19" height="34"/>', 254),
     }
 
 
